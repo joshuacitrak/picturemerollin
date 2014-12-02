@@ -1,0 +1,96 @@
+@include border-box-sizing;
+
+//
+//MAIN DOC STYLES=========================================== MAIN STYLES
+//
+
+
+//
+//HEADER STYLES=========================================== HEADER STYLES
+//
+header
+{
+  position:relative;
+}
+
+.jumbotron
+{
+   @include single-transition(all, $transition-time, ease-out);
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 200px;
+      margin: 0 auto;
+      
+  
+  border-bottom:$dark-yellow 1px solid;
+  @include background(linear-gradient(bottom left, rgba($black, .6), rgba($black, 0)),image-url("bike_sm.jpg"), $dark-yellow);
+  background-repeat: no-repeat;
+      background-position: center center;
+      $background-size:cover;
+      
+      @include susy-breakpoint($small-screen, 12)
+      {
+        @include single-transition(all, $transition-time, ease-out);
+        @include background(linear-gradient(bottom left, rgba($black, .6), rgba($black, 0)),image-url("bike_md.jpg"), $dark-yellow);
+        background-position: right center;
+        height: 300px;
+      }
+  
+      @include susy-breakpoint($medium-screen, 12)
+      {
+        @include single-transition(all, $transition-time, ease-out);
+        @include background(linear-gradient(bottom left, rgba($black, .6), rgba($black, 0)),image-url("bike_lg.jpg"), $dark-yellow);
+        background-position: right center;
+        height: 450px;
+      }
+  
+    .pmr
+  {
+    position:absolute;
+    bottom:10%;
+    left:0;
+    img
+    {
+      width:100%;
+      height:100%;
+    }
+    
+  }
+  
+}
+
+.caret
+{
+  position:absolute;
+  bottom:0;
+  img
+  {
+    display:block;
+    width:100%;
+  }
+}
+
+//
+//FOOTER STYLES=========================================== FOOTER STYLES
+//
+footer
+{
+  @include clearfix;
+}
+ul
+{
+  float:left;
+  li
+  {
+    display:inline-block;
+    margin:0 0 0 2em;
+  }
+}
+
+footer p
+{
+  color:$dark-grey;
+  font-size:$small-font-size;
+  margin:1em;
+}

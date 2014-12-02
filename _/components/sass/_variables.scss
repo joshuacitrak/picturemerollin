@@ -1,0 +1,58 @@
+//fonts====================================
+
+$main-font: 'roadgeek_2005_series_fregular';
+$secondary-font: 'bring_tha_noizeregular';
+$font-size:24px;
+$line-height:18px;
+$ex-small-font-size:.75em;
+$small-font-size:1em;
+$medium-font-size:1.2em;
+$large-font-size:1.6em;
+$ex-large-font-size:2em;
+$ex-ex-large-font-size:8.35em;
+
+//colors ===================================
+$yellow:#fac640;
+$dark-yellow: #e7ba46;
+$brown:#493d0b;
+$blue:#7ebefb;
+$dark-grey: #444;
+$grey: #8a8a8a;
+$light-grey: #949060;
+$black:#101010;
+$white:#efefef;
+
+//screen sizes ===============================
+//100% = 1 em ~= 16px ~= 14pt
+//
+$small-screen: 31.25em; //480/16
+$medium-screen: 48em; //768/16
+$large-screen: 80em; //1280/16
+$ex-large-screen: 120em; //1920/16
+
+
+//transitions==================================
+//
+$transition-time: .7s;
+$alpha-start: .6;
+$alpha-end: 1;
+
+//shadows======================================
+//
+$color1:rgba(0, 0, 0, .25);
+$h-offset1:2px;
+$v-offset1:2px;
+$blur1:2px;
+$color2:rgba(0, 0, 0, .25);
+$h-offset2:-2px;
+$v-offset2:-2px;
+$blur2:2px;
+$color3:rgba(0, 0, 0, .25);
+$h-offset3:-2px;
+$v-offset3:2px;
+$blur3:2px;
+$color4:rgba(0, 0, 0, .25);
+$h-offset4:2px;
+$v-offset4:-2px;
+$blur4:2px;
+

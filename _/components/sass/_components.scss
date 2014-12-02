@@ -1,0 +1,16 @@
+//rollovers/offs for soc icons===========
+//
+.soc-icons
+{
+  a
+  {
+    @include opacity($alpha-start);
+    @include single-transition(all, $transition-time, ease-out);
+    
+     &:hover
+    {
+      @include opacity($alpha-end);
+      @include single-transition(all, $transition-time, ease-out);
+    }
+  }
+}

@@ -1,0 +1,113 @@
+//
+//FONT STYLES=========================================== FONT STYLES
+//
+@font-face {
+    font-family: 'bring_tha_noizeregular';
+    src: url('../../fonts/bringthanoize-webfont.eot');
+    src: url('../../fonts/bringthanoize-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/bringthanoize-webfont.woff2') format('woff2'),
+         url('../../fonts/bringthanoize-webfont.woff') format('woff'),
+         url('../../fonts/bringthanoize-webfont.ttf') format('truetype'),
+         url('../../fonts/bringthanoize-webfont.svg#bring_tha_noizeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'roadgeek_2005_series_fregular';
+    src: url('../../fonts/roadgeek2005seriesf-webfont.eot');
+    src: url('../../fonts/roadgeek2005seriesf-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/roadgeek2005seriesf-webfont.woff2') format('woff2'),
+         url('../../fonts/roadgeek2005seriesf-webfont.woff') format('woff'),
+         url('../../fonts/roadgeek2005seriesf-webfont.ttf') format('truetype'),
+         url('../../fonts/roadgeek2005seriesf-webfont.svg#roadgeek_2005_series_fregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+//======================================================
+//============ TYPOGRAPHY ==============================
+//Font Size: 24 Line Height: 37 Content Width: 1170 Approx. CPL: 108 
+//http://modularscale.com/scale/?px1=24&px2=52&ra1=1.618&ra2=0
+//======================================================
+/*
+ * $rembase:10px;
+ * $line-height-base:37
+ */
+
+html
+{
+  font-size:62.5%;
+}
+body
+{
+  font-family:$main-font!important;
+  font-size:10px; /*fallback*/
+  font-size:1.0rem; /* 10/$rembase */
+  line-height: 1.542; /* $line-height-base ÷ $fontbase */
+}
+h1
+{
+  font-size:62px; /*fallback*/
+  font-size:6.2rem; /*62/$rembase*/
+  line-height: 2.583; /* $line-height-base ÷ 62*/
+}
+h2
+{
+  font-size:52px; /*fallback*/
+  font-size:5.2rem; /*52/$rembase*/
+  line-height:2.16;
+}
+h3
+{
+  font-size:38px; /*fallback*/
+  font-size:3.8rem; /*38/$rembase*/
+  line-height:1.583;
+}
+h4
+{
+  font-size:32px; /*fallback*/
+  font-size:3.2rem; /*32/$rembase*/
+  line-height:1.333;
+}
+p
+{
+  font-size:24px; /*fallback*/
+  font-size:2.4rem; /*24/$rembase*/
+  line-height:1;
+}
+//
+//MAIN STYLES=========================================== MAIN STYLES
+//
+body
+{
+  color: $white;
+  background: $yellow;  
+}
+
+#{headings()}
+{
+  
+}
+
+.layout
+{
+  @include container;
+}
+
+//
+//LINK STYLES=========================================== LINK STYLES
+//
+a
+{
+  text-decoration:none;
+  color:$blue;
+  
+  &:hover
+  {
+    color: darken($blue, 25%);
+    text-decoration:none;
+  }
+}
