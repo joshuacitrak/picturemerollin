@@ -2,3 +2,10 @@
 {
   @include box-shadow($shadow1, $shadow2, $shadow3, $shadow4);
 }
+
+@mixin content-box($bg-color:$yellow, $alpha:1)
+{
+  @include background($bg-color);
+  opacity:$alpha;
+  height:100%;
+}

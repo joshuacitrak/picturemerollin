@@ -1,5 +1,3 @@
-@include border-box-sizing;
-
 //
 //MAIN DOC STYLES=========================================== MAIN STYLES
 //
@@ -11,54 +9,138 @@
 header
 {
   position:relative;
-}
-
-.jumbotron
-{
-   @include single-transition(all, $transition-time, ease-out);
+  
+  .cover-photo
+  {
+     @include single-transition(all, $transition-time, ease-out);
       position: relative;
       display: block;
       width: 100%;
       height: 200px;
       margin: 0 auto;
-      
-  
-  border-bottom:$dark-yellow 1px solid;
-  @include background(linear-gradient(bottom left, rgba($black, .6), rgba($black, 0)),image-url("bike_sm.jpg"), $dark-yellow);
-  background-repeat: no-repeat;
+      border-bottom:$dark-yellow 1px solid;
+      @include background(linear-gradient(bottom left, rgba($black, .7), rgba($black, 0)), image-url("bike_sm.jpg"), $dark-yellow);
+      background-repeat: no-repeat;
       background-position: center center;
       $background-size:cover;
       
-      @include susy-breakpoint($small-screen, 12)
+      @media (min-width: $x-small-screen +1) 
       {
         @include single-transition(all, $transition-time, ease-out);
-        @include background(linear-gradient(bottom left, rgba($black, .6), rgba($black, 0)),image-url("bike_md.jpg"), $dark-yellow);
+        @include background(linear-gradient(bottom left, rgba($black, .7), rgba($black, 0)),image-url("bike_sm.jpg"), $dark-yellow);
         background-position: right center;
         height: 300px;
       }
   
-      @include susy-breakpoint($medium-screen, 12)
+      
+      @media (min-width: $medium-screen)
       {
         @include single-transition(all, $transition-time, ease-out);
-        @include background(linear-gradient(bottom left, rgba($black, .6), rgba($black, 0)),image-url("bike_lg.jpg"), $dark-yellow);
+        @include background(linear-gradient(bottom left, rgba($black, .7), rgba($black, 0)),image-url("bike_md.jpg"), $dark-yellow);
+        background-position: right center;
+        height: 350px;
+      }
+  
+     @media (min-width:$large-screen)
+      {
+        @include single-transition(all, $transition-time, ease-out);
+        @include background(linear-gradient(bottom left, rgba($black, .7), rgba($black, 0)),image-url("bike_lg.jpg"), $dark-yellow);
         background-position: right center;
         height: 450px;
       }
   
-    .pmr
-  {
-    position:absolute;
-    bottom:10%;
-    left:0;
-    img
-    {
-      width:100%;
-      height:100%;
-    }
-    
+     @media (min-width:$x-large-screen)
+      {
+        @include single-transition(all, $transition-time, ease-out);
+        @include background(linear-gradient(bottom left, rgba($black, .6), rgba($black, 0)),image-url("bike_lg.jpg"), $dark-yellow);
+        background-position: right center;
+        height: 550px;
+      }
+      
+      .title, .by-me
+      {
+        padding-left:$default-padding/2;
+        @media (min-width: $medium-screen)
+        {
+          @include single-transition(all, $transition-time, ease-out);
+          padding-left:$default-padding;
+        }
+      }
+      
+      .title
+      {
+        padding-top:$default-padding*4;
+        max-height:150px;
+        overflow:hidden;
+        width:100%;
+        img.pmr
+        {
+          display:block;
+          width:85%;
+          
+          @media (min-width:$large-screen)
+          {
+            width:852px;
+          }
+        }//pmr
+        
+        @media (min-width: $x-small-screen +1) 
+        {
+          @include single-transition(all, $transition-time, ease-out);
+          padding-top:$default-padding*6;
+          max-height:220px;
+        }
+        
+        @media (min-width: $medium-screen)
+        {
+          @include single-transition(all, $transition-time, ease-out);
+          padding-top:$default-padding*7;
+          max-height:280px;
+        }
+        
+        @media (min-width:$large-screen)
+        {
+          @include single-transition(all, $transition-time, ease-out);
+          padding-top:$default-padding*8;
+          max-height:300px;
+        }
+        
+      }//title
+      
+      .by-me
+      {
+        h2
+        {
+          font-family:$secondary-font;
+          font-size:20px; /*fallback*/
+          font-size:2rem;
+          
+           @media (min-width: $x-small-screen +1) 
+          {
+            @include single-transition(all, $transition-time, ease-out);
+            font-size:24px; /*fallback*/
+            font-size:2.4rem;
+          }
+          
+          @media (min-width: $medium-screen)
+          {
+            @include single-transition(all, $transition-time, ease-out);
+            font-size:32px; /*fallback*/
+            font-size:3.2rem;
+          }
+          
+          @media (min-width:$large-screen)
+          {
+            @include single-transition(all, $transition-time, ease-out);
+            font-size:38px; /*fallback*/
+            font-size:3.8rem;
+          }
+        }//h2
+        
+      }//by-me
   }
-  
 }
+
 
 .caret
 {

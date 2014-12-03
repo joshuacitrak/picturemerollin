@@ -131,86 +131,199 @@ body {
   color: #efefef;
   background: #fac640; }
 
-/* line 95, ../components/sass/_base.scss */
-.layout {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto; }
-  /* line 12, ../../../../../../Users/apple/.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
-  .layout:after {
-    content: " ";
-    display: block;
-    clear: both; }
+/* line 90, ../components/sass/_base.scss */
+.container-fluid {
+  padding: 0; }
 
-/* line 103, ../components/sass/_base.scss */
+/* line 98, ../components/sass/_base.scss */
 a {
   text-decoration: none;
   color: #7ebefb; }
-  /* line 108, ../components/sass/_base.scss */
+  /* line 103, ../components/sass/_base.scss */
   a:hover {
     color: #0880f2;
     text-decoration: none; }
 
-/* line 11, ../../../../../../Users/apple/.rvm/gems/ruby-2.1.2/gems/susy-2.1.2/sass/susy/language/susy/_box-sizing.scss */
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-/* line 11, ../components/sass/_layout.scss */
+/* line 9, ../components/sass/_layout.scss */
 header {
   position: relative; }
+  /* line 13, ../components/sass/_layout.scss */
+  header .cover-photo {
+    -moz-transition: all 0.7s ease-out;
+    -o-transition: all 0.7s ease-out;
+    -webkit-transition: all 0.7s ease-out;
+    transition: all 0.7s ease-out;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    border-bottom: #e7ba46 1px solid;
+    background: -moz-linear-gradient(bottom left, rgba(16, 16, 16, 0.7), rgba(16, 16, 16, 0)), url('../../images/build/bike_sm.jpg?1417584424'), #e7ba46;
+    background: -webkit-linear-gradient(bottom left, rgba(16, 16, 16, 0.7), rgba(16, 16, 16, 0)), url('../../images/build/bike_sm.jpg?1417584424'), #e7ba46;
+    background: linear-gradient(to top right, rgba(16, 16, 16, 0.7), rgba(16, 16, 16, 0)), url('../../images/build/bike_sm.jpg?1417584424'), #e7ba46;
+    background-repeat: no-repeat;
+    background-position: center center; }
+    @media (min-width: 501px) {
+      /* line 13, ../components/sass/_layout.scss */
+      header .cover-photo {
+        -moz-transition: all 0.7s ease-out;
+        -o-transition: all 0.7s ease-out;
+        -webkit-transition: all 0.7s ease-out;
+        transition: all 0.7s ease-out;
+        background: -moz-linear-gradient(bottom left, rgba(16, 16, 16, 0.7), rgba(16, 16, 16, 0)), url('../../images/build/bike_sm.jpg?1417584424'), #e7ba46;
+        background: -webkit-linear-gradient(bottom left, rgba(16, 16, 16, 0.7), rgba(16, 16, 16, 0)), url('../../images/build/bike_sm.jpg?1417584424'), #e7ba46;
+        background: linear-gradient(to top right, rgba(16, 16, 16, 0.7), rgba(16, 16, 16, 0)), url('../../images/build/bike_sm.jpg?1417584424'), #e7ba46;
+        background-position: right center;
+        height: 300px; } }
+    @media (min-width: 768px) {
+      /* line 13, ../components/sass/_layout.scss */
+      header .cover-photo {
+        -moz-transition: all 0.7s ease-out;
+        -o-transition: all 0.7s ease-out;
+        -webkit-transition: all 0.7s ease-out;
+        transition: all 0.7s ease-out;
+        background: -moz-linear-gradient(bottom left, rgba(16, 16, 16, 0.7), rgba(16, 16, 16, 0)), url('../../images/build/bike_md.jpg?1417584424'), #e7ba46;
+        background: -webkit-linear-gradient(bottom left, rgba(16, 16, 16, 0.7), rgba(16, 16, 16, 0)), url('../../images/build/bike_md.jpg?1417584424'), #e7ba46;
+        background: linear-gradient(to top right, rgba(16, 16, 16, 0.7), rgba(16, 16, 16, 0)), url('../../images/build/bike_md.jpg?1417584424'), #e7ba46;
+        background-position: right center;
+        height: 350px; } }
+    @media (min-width: 1024px) {
+      /* line 13, ../components/sass/_layout.scss */
+      header .cover-photo {
+        -moz-transition: all 0.7s ease-out;
+        -o-transition: all 0.7s ease-out;
+        -webkit-transition: all 0.7s ease-out;
+        transition: all 0.7s ease-out;
+        background: -moz-linear-gradient(bottom left, rgba(16, 16, 16, 0.7), rgba(16, 16, 16, 0)), url('../../images/build/bike_lg.jpg?1417584424'), #e7ba46;
+        background: -webkit-linear-gradient(bottom left, rgba(16, 16, 16, 0.7), rgba(16, 16, 16, 0)), url('../../images/build/bike_lg.jpg?1417584424'), #e7ba46;
+        background: linear-gradient(to top right, rgba(16, 16, 16, 0.7), rgba(16, 16, 16, 0)), url('../../images/build/bike_lg.jpg?1417584424'), #e7ba46;
+        background-position: right center;
+        height: 450px; } }
+    @media (min-width: 1500px) {
+      /* line 13, ../components/sass/_layout.scss */
+      header .cover-photo {
+        -moz-transition: all 0.7s ease-out;
+        -o-transition: all 0.7s ease-out;
+        -webkit-transition: all 0.7s ease-out;
+        transition: all 0.7s ease-out;
+        background: -moz-linear-gradient(bottom left, rgba(16, 16, 16, 0.6), rgba(16, 16, 16, 0)), url('../../images/build/bike_lg.jpg?1417584424'), #e7ba46;
+        background: -webkit-linear-gradient(bottom left, rgba(16, 16, 16, 0.6), rgba(16, 16, 16, 0)), url('../../images/build/bike_lg.jpg?1417584424'), #e7ba46;
+        background: linear-gradient(to top right, rgba(16, 16, 16, 0.6), rgba(16, 16, 16, 0)), url('../../images/build/bike_lg.jpg?1417584424'), #e7ba46;
+        background-position: right center;
+        height: 550px; } }
+    /* line 60, ../components/sass/_layout.scss */
+    header .cover-photo .title, header .cover-photo .by-me {
+      padding-left: 12px; }
+      @media (min-width: 768px) {
+        /* line 60, ../components/sass/_layout.scss */
+        header .cover-photo .title, header .cover-photo .by-me {
+          -moz-transition: all 0.7s ease-out;
+          -o-transition: all 0.7s ease-out;
+          -webkit-transition: all 0.7s ease-out;
+          transition: all 0.7s ease-out;
+          padding-left: 24px; } }
+    /* line 70, ../components/sass/_layout.scss */
+    header .cover-photo .title {
+      padding-top: 96px;
+      max-height: 150px;
+      overflow: hidden;
+      width: 100%; }
+      /* line 76, ../components/sass/_layout.scss */
+      header .cover-photo .title img.pmr {
+        display: block;
+        width: 85%; }
+        @media (min-width: 1024px) {
+          /* line 76, ../components/sass/_layout.scss */
+          header .cover-photo .title img.pmr {
+            width: 852px; } }
+      @media (min-width: 501px) {
+        /* line 70, ../components/sass/_layout.scss */
+        header .cover-photo .title {
+          -moz-transition: all 0.7s ease-out;
+          -o-transition: all 0.7s ease-out;
+          -webkit-transition: all 0.7s ease-out;
+          transition: all 0.7s ease-out;
+          padding-top: 144px;
+          max-height: 220px; } }
+      @media (min-width: 768px) {
+        /* line 70, ../components/sass/_layout.scss */
+        header .cover-photo .title {
+          -moz-transition: all 0.7s ease-out;
+          -o-transition: all 0.7s ease-out;
+          -webkit-transition: all 0.7s ease-out;
+          transition: all 0.7s ease-out;
+          padding-top: 168px;
+          max-height: 280px; } }
+      @media (min-width: 1024px) {
+        /* line 70, ../components/sass/_layout.scss */
+        header .cover-photo .title {
+          -moz-transition: all 0.7s ease-out;
+          -o-transition: all 0.7s ease-out;
+          -webkit-transition: all 0.7s ease-out;
+          transition: all 0.7s ease-out;
+          padding-top: 192px;
+          max-height: 300px; } }
+    /* line 112, ../components/sass/_layout.scss */
+    header .cover-photo .by-me h2 {
+      font-family: "bring_tha_noizeregular";
+      font-size: 20px;
+      /*fallback*/
+      font-size: 2rem; }
+      @media (min-width: 501px) {
+        /* line 112, ../components/sass/_layout.scss */
+        header .cover-photo .by-me h2 {
+          -moz-transition: all 0.7s ease-out;
+          -o-transition: all 0.7s ease-out;
+          -webkit-transition: all 0.7s ease-out;
+          transition: all 0.7s ease-out;
+          font-size: 24px;
+          /*fallback*/
+          font-size: 2.4rem; } }
+      @media (min-width: 768px) {
+        /* line 112, ../components/sass/_layout.scss */
+        header .cover-photo .by-me h2 {
+          -moz-transition: all 0.7s ease-out;
+          -o-transition: all 0.7s ease-out;
+          -webkit-transition: all 0.7s ease-out;
+          transition: all 0.7s ease-out;
+          font-size: 32px;
+          /*fallback*/
+          font-size: 3.2rem; } }
+      @media (min-width: 1024px) {
+        /* line 112, ../components/sass/_layout.scss */
+        header .cover-photo .by-me h2 {
+          -moz-transition: all 0.7s ease-out;
+          -o-transition: all 0.7s ease-out;
+          -webkit-transition: all 0.7s ease-out;
+          transition: all 0.7s ease-out;
+          font-size: 38px;
+          /*fallback*/
+          font-size: 3.8rem; } }
 
-/* line 16, ../components/sass/_layout.scss */
-.jumbotron {
-  -moz-transition: all 0.7s ease-out;
-  -o-transition: all 0.7s ease-out;
-  -webkit-transition: all 0.7s ease-out;
-  transition: all 0.7s ease-out;
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 200px;
-  margin: 0 auto;
-  border-bottom: #e7ba46 1px solid;
-  background: -moz-linear-gradient(bottom left, rgba(16, 16, 16, 0.6), rgba(16, 16, 16, 0)), url('../../images/build/bike_sm.jpg?1417494254'), #e7ba46;
-  background: -webkit-linear-gradient(bottom left, rgba(16, 16, 16, 0.6), rgba(16, 16, 16, 0)), url('../../images/build/bike_sm.jpg?1417494254'), #e7ba46;
-  background: linear-gradient(to top right, rgba(16, 16, 16, 0.6), rgba(16, 16, 16, 0)), url('../../images/build/bike_sm.jpg?1417494254'), #e7ba46;
-  background-repeat: no-repeat;
-  background-position: center center; }
-  /* line 48, ../components/sass/_layout.scss */
-  .jumbotron .pmr {
-    position: absolute;
-    bottom: 10%;
-    left: 0; }
-    /* line 53, ../components/sass/_layout.scss */
-    .jumbotron .pmr img {
-      width: 100%;
-      height: 100%; }
-
-/* line 63, ../components/sass/_layout.scss */
+/* line 145, ../components/sass/_layout.scss */
 .caret {
   position: absolute;
   bottom: 0; }
-  /* line 67, ../components/sass/_layout.scss */
+  /* line 149, ../components/sass/_layout.scss */
   .caret img {
     display: block;
     width: 100%; }
 
-/* line 77, ../components/sass/_layout.scss */
+/* line 159, ../components/sass/_layout.scss */
 footer {
   overflow: hidden;
   *zoom: 1; }
 
-/* line 81, ../components/sass/_layout.scss */
+/* line 163, ../components/sass/_layout.scss */
 ul {
   float: left; }
-  /* line 84, ../components/sass/_layout.scss */
+  /* line 166, ../components/sass/_layout.scss */
   ul li {
     display: inline-block;
     margin: 0 0 0 2em; }
 
-/* line 91, ../components/sass/_layout.scss */
+/* line 173, ../components/sass/_layout.scss */
 footer p {
   color: #444444;
   font-size: 1em;

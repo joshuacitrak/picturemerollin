@@ -24,11 +24,17 @@ $white:#efefef;
 
 //screen sizes ===============================
 //100% = 1 em ~= 16px ~= 14pt
+//CHANGE THIS TO FIT REMS
 //
-$small-screen: 31.25em; //480/16
-$medium-screen: 48em; //768/16
-$large-screen: 80em; //1280/16
-$ex-large-screen: 120em; //1920/16
+$x-small-screen: 500px; //500/16
+$small-screen:  680px; //680/16
+$medium-screen: 768px; //768/16
+$large-screen: 1024px; //1280/16
+$x-large-screen: 1500px; //1920/16
+
+//margin + padding ===========================
+$default-margin:12px;
+$default-padding:24px;
 
 
 //transitions==================================

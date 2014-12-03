@@ -87,14 +87,9 @@ body
   background: $yellow;  
 }
 
-#{headings()}
+.container-fluid
 {
-  
-}
-
-.layout
-{
-  @include container;
+  padding:0;
 }
 
 //
