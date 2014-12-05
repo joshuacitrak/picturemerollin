@@ -23,12 +23,19 @@
 		<!-- Add your site or application content here -->
 		<div class="container-fluid">
 				<header>
+					
+					<div class="hamburger-container visible-xs">
+						<div class="hamburger"></div>
+						<a href="#footer"></a>
+					</div><!--hamburger hide in larger screens -->
 					<div class="cover-photo">
+						
 						<div class="title">
-							<img class="pmr" src="images/svg_sprite.svg" alt="picture me rollin'" />
+							<img class="pmr" src="images/build/svg_sprite.svg" alt="picture me rollin'" />
 						</div><!--title-->
 						<div class="by-me">
-							<h2>A <a href="#">novel</a> by Joshua Citrak</h2>
+							<h2>A <span class="type-by-line">novel</span> by Joshua Citrak</h2>
+							<div class="underline"></div>
 						</div><!--by-me-->
 					</div><!-- cover photo -->
 				</header>
@@ -107,6 +114,7 @@
 		</section>
 
 		<footer>
+			<a name="footer"></a>
 			<div class="layout">
 				<p class="soc-connect">
 					Connect with me to find my events, other writings, Picture Me Rollin' inspired Spotify playlist or to inquire about the manuscript itself, hit me up at the appropriate medium below&mdash;
@@ -140,6 +148,16 @@
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 		<script src="_/js/script.js"></script>
+		
+		<script>
+            $(document).ready(function()
+                              {
+                                $(".hamburger-container").click(function(){
+     window.location=$(this).find("a").attr("href"); 
+     return false;
+});
+                              });
+        </script>
 
 	</body>
 </html>

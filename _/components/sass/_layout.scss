@@ -19,7 +19,7 @@ header
       height: 200px;
       margin: 0 auto;
       border-bottom:$dark-yellow 1px solid;
-      @include background(linear-gradient(bottom left, rgba($black, .7), rgba($black, 0)), image-url("bike_sm.jpg"), $dark-yellow);
+      @include background(linear-gradient(bottom left, rgba($black, .7), rgba($black, 0)), image-url("bike_xs.jpg"), $dark-yellow);
       background-repeat: no-repeat;
       background-position: center center;
       $background-size:cover;
@@ -52,9 +52,9 @@ header
      @media (min-width:$x-large-screen)
       {
         @include single-transition(all, $transition-time, ease-out);
-        @include background(linear-gradient(bottom left, rgba($black, .6), rgba($black, 0)),image-url("bike_lg.jpg"), $dark-yellow);
+        @include background(linear-gradient(bottom left, rgba($black, .6), rgba($black, 0)),image-url("bike_xlg.jpg"), $dark-yellow);
         background-position: right center;
-        height: 550px;
+        height: 600px;
       }
       
       .title, .by-me
@@ -105,6 +105,13 @@ header
           max-height:300px;
         }
         
+        @media (min-width:$x-large-screen)
+        {
+          @include single-transition(all, $transition-time, ease-out);
+          padding-top:$default-padding*14;
+          max-height:460px;
+        }
+        
       }//title
       
       .by-me
@@ -138,18 +145,6 @@ header
         }//h2
         
       }//by-me
-  }
-}
-
-
-.caret
-{
-  position:absolute;
-  bottom:0;
-  img
-  {
-    display:block;
-    width:100%;
   }
 }
 

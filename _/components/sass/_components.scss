@@ -14,3 +14,76 @@
     }
   }
 }
+
+.hamburger-container
+{
+  @include background($black);
+  border:$grey 1px solid;
+  width:50px;
+  height:50px;
+  position:absolute;
+  top:10px;
+  right:10px;
+  z-index:1000;
+  opacity:.8;
+  overflow:hidden;
+  
+  .hamburger
+  {
+    @include background(image-url('asterisk.png'));
+    @include background-size(80%);
+    height:100%;    
+    background-position:center;
+    background-repeat:no-repeat;
+  }
+}
+
+.underline
+{
+  @include background(image-url('underline.png'));
+  background-size:60px auto;
+   height:20px;
+   background-repeat:no-repeat;
+   overflow:hidden;
+   margin:-20px 0 0 15px;
+}
+
+@media (min-width: $x-small-screen +1) 
+      {
+        .underline
+        {
+          @include background(image-url('hamburger.png'));
+          background-size:70px auto;
+           height:25px;
+           background-repeat:no-repeat;
+           overflow:hidden;
+           margin:-25px 0 0 20px;
+        }
+      }
+  
+      
+      @media (min-width: $medium-screen)
+      {
+        .underline
+        {
+          @include background(image-url('hamburger.png'));
+          background-size:90px auto;
+           height:33px;
+           background-repeat:no-repeat;
+           overflow:hidden;
+           margin:-35px 0 0 20px;
+        }
+      }
+  
+     @media (min-width:$large-screen)
+      {
+        .underline
+        {
+          @include background(image-url('hamburger.png'));
+          background-size:120px auto;
+           height:40px;
+           background-repeat:no-repeat;
+           overflow:hidden;
+           margin:-40px 0 0 20px;
+        }
+      }
