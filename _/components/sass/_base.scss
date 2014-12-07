@@ -83,6 +83,14 @@ p
 {
   color:$blue;
 }
+
+h3.menu-header
+{
+  font-size:20px;
+  font-size:2rem;
+  font-family:$secondary-font;
+  line-height:.7;
+}
 //
 //MAIN STYLES=========================================== MAIN STYLES
 //
@@ -92,7 +100,7 @@ body
   background: $yellow;  
 }
 
-.container-fluid
+.container-fluid//reset
 {
   padding:0;
 }
@@ -104,11 +112,14 @@ a
 {
   text-decoration:none;
   color:$blue;
-  
+  @include opacity($alpha-start);
+  @include single-transition(all, $transition-time, ease-out);
   &:hover
   {
     color: darken($blue, 25%);
     text-decoration:none;
+    @include opacity($alpha-end);
+    @include single-transition(all, $transition-time, ease-out);
   }
+  
 }
-

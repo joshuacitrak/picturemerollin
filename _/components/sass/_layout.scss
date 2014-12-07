@@ -12,48 +12,42 @@ header
   
   .cover-photo
   {
-     @include single-transition(all, $transition-time, ease-out);
+     @include animate();
       position: relative;
       display: block;
       width: 100%;
       height: 200px;
       margin: 0 auto;
       border-bottom:$dark-yellow 1px solid;
-      @include background(linear-gradient(bottom left, rgba($black, .7), rgba($black, 0)), image-url("bike_xs.jpg"), $dark-yellow);
-      background-repeat: no-repeat;
-      background-position: center center;
+      @include background(linear-gradient(bottom left, rgba($black, .7), rgba($black, 0)),image-url("bike_xs.jpg") center top no-repeat, $dark-yellow);
       $background-size:cover;
       
       @media (min-width: $x-small-screen +1) 
       {
-        @include single-transition(all, $transition-time, ease-out);
-        @include background(linear-gradient(bottom left, rgba($black, .7), rgba($black, 0)),image-url("bike_sm.jpg"), $dark-yellow);
-        background-position: right center;
+        @include animate();
+        @include background(linear-gradient(bottom left, rgba($black, .7), rgba($black, 0)),image-url("bike_sm.jpg") center top no-repeat, $dark-yellow);
         height: 300px;
       }
   
       
       @media (min-width: $medium-screen)
       {
-        @include single-transition(all, $transition-time, ease-out);
-        @include background(linear-gradient(bottom left, rgba($black, .7), rgba($black, 0)),image-url("bike_md.jpg"), $dark-yellow);
-        background-position: right center;
+        @include animate();
+        @include background(linear-gradient(bottom left, rgba($black, .7), rgba($black, 0)),image-url("thecity.svg") center bottom no-repeat, image-url("bike_md.jpg") center top no-repeat, $dark-yellow);
         height: 350px;
       }
   
      @media (min-width:$large-screen)
       {
-        @include single-transition(all, $transition-time, ease-out);
-        @include background(linear-gradient(bottom left, rgba($black, .7), rgba($black, 0)),image-url("bike_lg.jpg"), $dark-yellow);
-        background-position: right center;
+        @include animate();
+        @include background(linear-gradient(bottom left, rgba($black, .7), rgba($black, 0)),image-url("thecity.svg") center bottom no-repeat, image-url("bike_lg.jpg") center top no-repeat, $dark-yellow);
         height: 450px;
       }
   
      @media (min-width:$x-large-screen)
       {
-        @include single-transition(all, $transition-time, ease-out);
-        @include background(linear-gradient(bottom left, rgba($black, .6), rgba($black, 0)),image-url("bike_xlg.jpg"), $dark-yellow);
-        background-position: right center;
+        @include animate();
+        @include background(linear-gradient(bottom left, rgba($black, .6), rgba($black, 0)),image-url("thecity.svg") center bottom no-repeat, image-url("bike_xlg.jpg") center top no-repeat, $dark-yellow);
         height: 600px;
       }
       
@@ -62,7 +56,7 @@ header
         padding-left:$default-padding/2;
         @media (min-width: $medium-screen)
         {
-          @include single-transition(all, $transition-time, ease-out);
+          @include animate();
           padding-left:$default-padding;
         }
       }
@@ -76,40 +70,48 @@ header
         img.pmr
         {
           display:block;
-          width:85%;
+          width:80%;
+          
+          
+          @media (min-width:$medium-screen)
+          {
+            width:528px;
+          }
           
           @media (min-width:$large-screen)
           {
             width:852px;
           }
+          
+          
         }//pmr
         
         @media (min-width: $x-small-screen +1) 
         {
-          @include single-transition(all, $transition-time, ease-out);
+          @include animate();
           padding-top:$default-padding*6;
           max-height:220px;
         }
         
         @media (min-width: $medium-screen)
         {
-          @include single-transition(all, $transition-time, ease-out);
-          padding-top:$default-padding*7;
+          @include animate();
+          padding-top:$default-padding*9;
           max-height:280px;
         }
         
         @media (min-width:$large-screen)
         {
-          @include single-transition(all, $transition-time, ease-out);
-          padding-top:$default-padding*8;
-          max-height:300px;
+          @include animate();
+          padding-top:$default-padding*11;
+          max-height:365px;
         }
         
         @media (min-width:$x-large-screen)
         {
-          @include single-transition(all, $transition-time, ease-out);
-          padding-top:$default-padding*14;
-          max-height:460px;
+          @include animate();
+          padding-top:$default-padding*16;
+          max-height:500px;
         }
         
       }//title
@@ -124,21 +126,21 @@ header
           
            @media (min-width: $x-small-screen +1) 
           {
-            @include single-transition(all, $transition-time, ease-out);
+            @include animate();
             font-size:24px; /*fallback*/
             font-size:2.4rem;
           }
           
           @media (min-width: $medium-screen)
           {
-            @include single-transition(all, $transition-time, ease-out);
+            @include animate();
             font-size:32px; /*fallback*/
             font-size:3.2rem;
           }
           
           @media (min-width:$large-screen)
           {
-            @include single-transition(all, $transition-time, ease-out);
+            @include animate();
             font-size:38px; /*fallback*/
             font-size:3.8rem;
           }
@@ -148,26 +150,62 @@ header
   }
 }
 
-//
-//FOOTER STYLES=========================================== FOOTER STYLES
-//
-footer
+.map-content
 {
-  @include clearfix;
+  padding:$default-padding 0;
 }
-ul
+
+.bio
 {
-  float:left;
-  li
+  padding-bottom:$default-padding;
+  
+  .author-image
   {
-    display:inline-block;
-    margin:0 0 0 2em;
+    
+    @include border-radius(50%);
+    height:200px;
+    width:200px;
+    @include background(image-url('bio-sm.jpg') no-repeat, $dark-yellow);
+    
+    @media(min-width:$medium-screen)
+    {
+      @include background(image-url('bio.jpg') no-repeat, $dark-yellow);
+      height:480px;
+      width:480px;
+    }
+    
+  }
+  
+  .author-bio
+  {
+    .author-bio-name
+    {
+      font-family:$secondary-font;
+      color:$blue;
+    }
   }
 }
 
+//
+//FOOTER STYLES=========================================== FOOTER STYLES
+//
+footer, .footer-content
+{
+  padding:$default-padding $default-padding/2;  
+  background:$dark-yellow;
+}
+footer
+{
+  margin-top:$default-padding;
+}
 footer p
 {
   color:$dark-grey;
-  font-size:$small-font-size;
+  font-size:$medium-font-size;
   margin:1em;
+}
+.copyright-stuff
+{
+  font-size:$small-font-size;
+  margin-top:.5em;
 }

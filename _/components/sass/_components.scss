@@ -1,19 +1,146 @@
+.thecity
+{
+  width:100%;
+  height:100%;
+  position:absolute;
+  display:inline-block;
+  top:0;
+  opacity:.8;
+  @include background(image-url("thecity.svg") no-repeat);
+}
+
 //rollovers/offs for soc icons===========
 //
 .soc-icons
 {
-  a
+  display:block;
+  overflow:hidden;
+  width:48px;
+  height:48px;
+  background-repeat:no-repeat;
+  margin-bottom:$default-margin/2; 
+}
+
+.twitter
   {
-    @include opacity($alpha-start);
-    @include single-transition(all, $transition-time, ease-out);
-    
-     &:hover
-    {
-      @include opacity($alpha-end);
-      @include single-transition(all, $transition-time, ease-out);
-    }
+    @include background(image-url('soc/icon_sprite.png') -250px 0);
+    background-repeat:no-repeat;
+  }
+  
+  .facebook
+  {
+    @include background(image-url('soc/icon_sprite.png')-100px 0);
+    background-repeat:no-repeat;
+  }
+  
+  .google
+  {
+    @include background(image-url('soc/icon_sprite.png')-150px 0);
+    background-repeat:no-repeat;
+  }
+  
+  .email
+  {
+    @include background(image-url('soc/icon_sprite.png') -50px 0);
+    background-repeat:no-repeat;
+  }
+  
+  .spotify
+  {
+    @include background(image-url('soc/icon_sprite.png')-200px 0);
+    background-repeat:no-repeat;
+  }
+  
+  .download
+  {
+    @include background(image-url('soc/icon_sprite.png'));
+    background-repeat:no-repeat;
+  }
+
+.menu-box
+{
+  @include animate();
+  @include content-box($black, $white, .8);
+  width:93px;
+  height:349px;
+  position:absolute;
+  top:0px;
+  z-index: 1000;
+  padding:0;
+  margin:0;
+  cursor: pointer;
+  opacity:.45;
+  
+  &:after,
+  &:before 
+  {
+    @include triangle-before-after();
+    right:100%;
+    top:30%;
+  }
+  //the bg
+  &:after 
+  {
+     @include triangle-right(30px, 20px, 20px, $black);
+     z-index: 1;
+  }
+  //the outline
+  &:before 
+  {
+    @include triangle-right(31px, 21px, 21px, $white);
+     margin-top:-1px;
+    margin-left:-1px;
+    z-index:-100;//put it below the bg triangle
+  }
+
+  
+   @media (min-width:$large-screen)
+      {
+        width:210px;
+        height:449px;
+      }
+   @media (min-width:$x-large-screen)
+      {
+        width:210px;
+        height:599px;
+      }
+}
+            
+.menu-box-active
+{
+ opacity:1;
+}
+            
+.menu-box-right
+{
+  right:-48px;
+  @media (min-width:$large-screen)
+      {
+        right:-174px;
+      }
+   @media (min-width:$x-large-screen)
+      {
+       right:-174px;
+      }
+}
+         
+.menu-box-open
+{
+  right:0px;
+}
+
+.menu-content
+{
+  color:$yellow;
+  padding-left:$default-padding;
+  
+  h3.menu-header
+  {
+    display:inline-block;
+    padding:$default-padding/2 0;
   }
 }
+            
 
 .hamburger-container
 {
@@ -46,44 +173,123 @@
    background-repeat:no-repeat;
    overflow:hidden;
    margin:-20px 0 0 15px;
-}
-
-@media (min-width: $x-small-screen +1) 
+   
+   @media (min-width: $x-small-screen +1) 
       {
-        .underline
-        {
-          @include background(image-url('hamburger.png'));
+        @include background(image-url('hamburger.png'));
           background-size:70px auto;
            height:25px;
            background-repeat:no-repeat;
            overflow:hidden;
            margin:-25px 0 0 20px;
-        }
       }
-  
       
       @media (min-width: $medium-screen)
       {
-        .underline
-        {
-          @include background(image-url('hamburger.png'));
+        @include background(image-url('hamburger.png'));
           background-size:90px auto;
            height:33px;
            background-repeat:no-repeat;
            overflow:hidden;
            margin:-35px 0 0 20px;
-        }
       }
-  
-     @media (min-width:$large-screen)
+      
+      @media (min-width:$large-screen)
       {
-        .underline
-        {
-          @include background(image-url('hamburger.png'));
+        @include background(image-url('hamburger.png'));
           background-size:120px auto;
            height:40px;
            background-repeat:no-repeat;
            overflow:hidden;
            margin:-40px 0 0 20px;
-        }
       }
+}
+
+.quote-by-content, .quote-content
+{
+  padding:$default-padding $default-padding/2;
+  color:$dark-grey;
+  @media (min-width: $medium-screen)
+      {
+        padding:$default-padding*2 $default-padding;
+        margin:$default-padding $default-padding/2;
+      }
+}
+
+.quote-content
+{
+  @include content-box($dark-yellow, lighten($dark-yellow, 10%));
+  position:relative;  
+}
+
+.quote-content-wrapper
+{
+  &:after,
+  &:before 
+  {
+    @include triangle-before-after();
+    left:97%;
+    top:30%;
+    @media (max-width: $medium-screen)
+      {
+        left:94%;
+      }
+  }
+  //the bg
+  &:after 
+  {
+     @include triangle-left(40px, 45px, 45px, $dark-yellow);
+     z-index: 1;
+  }
+  //the outline
+  &:before 
+  {
+    @include triangle-left(41px, 46px, 46px, lighten($dark-yellow, 10%));
+     margin-top:-1px;
+    margin-right:-1px;
+    z-index:-100;//put it below the bg triangle
+  }
+}
+.quote-by-content h4
+{
+  font-family:$secondary-font;
+  color:$blue;
+}
+
+.quote-mark
+{
+  font-family:$secondary-font;
+  font-size:$ex-large-font-size + .2;
+  display:inline-block;
+  line-height:.1;
+  padding:6px 12px;
+  color:darken($dark-grey, 20%);
+  
+  &:last-child
+  {
+    position:absolute;
+    left:90%;
+    bottom:4%;
+    
+    @media (min-width: $medium-screen)
+      {
+        left:85%;
+      }
+  }
+}
+.carousel-control.left, .carousel-control.right //reset
+{
+  background:none;
+}
+.quote-arrows-left, .quote-arrows-right
+{
+  font-family:$secondary-font;
+  font-size:$ex-ex-large-font-size;
+  color:$black;
+}
+
+.author-image
+{
+  //make quote box here
+}
+

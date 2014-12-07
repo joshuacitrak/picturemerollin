@@ -3,9 +3,38 @@
   @include box-shadow($shadow1, $shadow2, $shadow3, $shadow4);
 }
 
-@mixin content-box($bg-color:$yellow, $alpha:1)
+@mixin content-box($bg-color:$yellow, $border-color:$white, $alpha:1)
 {
   @include background($bg-color);
+  border:1px solid $border-color;
   opacity:$alpha;
   height:100%;
+}
+
+@mixin triangle-right($border-right-length, $border-top-length, $border-bottom-length, $color)
+{
+  border-right:$border-right-length solid $color;
+  border-top:$border-top-length solid transparent;
+  border-bottom:$border-bottom-length solid transparent;
+}
+
+@mixin triangle-left($border-left-length, $border-top-length, $border-bottom-length, $color)
+{
+  border-left:$border-left-length solid $color;
+  border-top:$border-top-length solid transparent;
+  border-bottom:$border-bottom-length solid transparent;
+}
+
+@mixin triangle-before-after()
+{
+  width:0;
+  height:0;
+  display:block;
+  position:absolute;
+  content: "";
+}
+
+@mixin animate()
+{
+  @include single-transition(all, $transition-time, ease-out);
 }
