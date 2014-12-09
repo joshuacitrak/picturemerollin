@@ -150,10 +150,22 @@ header
   }
 }
 
-.map-content
+.section-wrapper
 {
+  @include background(rgba(0, 0, 0, .5));
   padding:$default-padding 0;
 }
+
+.tag-line, .pitch-line
+{
+  color:$white;
+}
+
+.tag-line
+{
+  line-height:.9;
+}
+
 
 .bio
 {
@@ -170,8 +182,8 @@ header
     @media(min-width:$medium-screen)
     {
       @include background(image-url('bio.jpg') no-repeat, $dark-yellow);
-      height:480px;
-      width:480px;
+      height:300px;
+      width:300px;
     }
     
   }
@@ -186,17 +198,22 @@ header
   }
 }
 
+.cta
+{
+  line-height:2;//give space
+}
+
 //
 //FOOTER STYLES=========================================== FOOTER STYLES
 //
 footer, .footer-content
 {
   padding:$default-padding $default-padding/2;  
-  background:$dark-yellow;
 }
 footer
 {
   margin-top:$default-padding;
+  @include background(rgba(0, 0, 0, .35));
 }
 footer p
 {

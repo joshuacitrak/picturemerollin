@@ -137,16 +137,16 @@ h3.menu-header {
   font-family: "bring_tha_noizeregular";
   line-height: .7; }
 
-/* line 97, ../components/sass/_base.scss */
+/* line 98, ../components/sass/_base.scss */
 body {
   color: #efefef;
   background: #fac640; }
 
-/* line 103, ../components/sass/_base.scss */
+/* line 104, ../components/sass/_base.scss */
 .container-fluid {
   padding: 0; }
 
-/* line 111, ../components/sass/_base.scss */
+/* line 112, ../components/sass/_base.scss */
 a {
   text-decoration: none;
   color: #7ebefb;
@@ -156,7 +156,7 @@ a {
   -o-transition: all 0.7s ease-out;
   -webkit-transition: all 0.7s ease-out;
   transition: all 0.7s ease-out; }
-  /* line 117, ../components/sass/_base.scss */
+  /* line 118, ../components/sass/_base.scss */
   a:hover {
     color: #0880f2;
     text-decoration: none;
@@ -332,13 +332,22 @@ header {
           font-size: 3.8rem; } }
 
 /* line 153, ../components/sass/_layout.scss */
-.map-content {
+.section-wrapper {
+  background: rgba(0, 0, 0, 0.5);
   padding: 24px 0; }
 
-/* line 158, ../components/sass/_layout.scss */
+/* line 159, ../components/sass/_layout.scss */
+.tag-line, .pitch-line {
+  color: #efefef; }
+
+/* line 164, ../components/sass/_layout.scss */
+.tag-line {
+  line-height: .9; }
+
+/* line 170, ../components/sass/_layout.scss */
 .bio {
   padding-bottom: 24px; }
-  /* line 162, ../components/sass/_layout.scss */
+  /* line 174, ../components/sass/_layout.scss */
   .bio .author-image {
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -347,32 +356,36 @@ header {
     width: 200px;
     background: url('../../images/build/bio-sm.jpg?1417975486') no-repeat, #e7ba46; }
     @media (min-width: 768px) {
-      /* line 162, ../components/sass/_layout.scss */
+      /* line 174, ../components/sass/_layout.scss */
       .bio .author-image {
         background: url('../../images/build/bio.jpg?1417975486') no-repeat, #e7ba46;
-        height: 480px;
-        width: 480px; } }
-  /* line 181, ../components/sass/_layout.scss */
+        height: 300px;
+        width: 300px; } }
+  /* line 193, ../components/sass/_layout.scss */
   .bio .author-bio .author-bio-name {
     font-family: "bring_tha_noizeregular";
     color: #7ebefb; }
 
-/* line 192, ../components/sass/_layout.scss */
-footer, .footer-content {
-  padding: 24px 12px;
-  background: #e7ba46; }
-
-/* line 197, ../components/sass/_layout.scss */
-footer {
-  margin-top: 24px; }
-
 /* line 201, ../components/sass/_layout.scss */
+.cta {
+  line-height: 2; }
+
+/* line 209, ../components/sass/_layout.scss */
+footer, .footer-content {
+  padding: 24px 12px; }
+
+/* line 213, ../components/sass/_layout.scss */
+footer {
+  margin-top: 24px;
+  background: rgba(0, 0, 0, 0.35); }
+
+/* line 218, ../components/sass/_layout.scss */
 footer p {
   color: #444444;
   font-size: 1.2em;
   margin: 1em; }
 
-/* line 207, ../components/sass/_layout.scss */
+/* line 224, ../components/sass/_layout.scss */
 .copyright-stuff {
   font-size: 1em;
   margin-top: .5em; }
@@ -436,6 +449,12 @@ footer p {
   border: 1px solid #efefef;
   opacity: 0.8;
   height: 100%;
+  -moz-border-radius-topleft: 7px;
+  -webkit-border-top-left-radius: 7px;
+  border-top-left-radius: 7px;
+  -moz-border-radius-bottomleft: 7px;
+  -webkit-border-bottom-left-radius: 7px;
+  border-bottom-left-radius: 7px;
   width: 93px;
   height: 349px;
   position: absolute;
@@ -583,6 +602,12 @@ footer p {
   border: 1px solid #edcb73;
   opacity: 1;
   height: 100%;
+  -moz-border-radius-topright: 7px;
+  -webkit-border-top-right-radius: 7px;
+  border-top-right-radius: 7px;
+  -moz-border-radius-bottomright: 7px;
+  -webkit-border-bottom-right-radius: 7px;
+  border-bottom-right-radius: 7px;
   position: relative; }
 
 /* line 227, ../components/sass/_components.scss */

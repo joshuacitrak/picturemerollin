@@ -60,7 +60,7 @@
 .menu-box
 {
   @include animate();
-  @include content-box($black, $white, .8);
+  @include content-box-left($black, $white, .8, 7px);
   width:93px;
   height:349px;
   position:absolute;
@@ -218,7 +218,7 @@
 
 .quote-content
 {
-  @include content-box($dark-yellow, lighten($dark-yellow, 10%));
+  @include content-box-right($dark-yellow, lighten($dark-yellow, 10%), 1, 7px);
   position:relative;  
 }
 

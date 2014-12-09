@@ -11,6 +11,20 @@
   height:100%;
 }
 
+@mixin content-box-right($bg-color:$yellow, $border-color:$white, $alpha:1, $border-radius:7)
+{
+  @include content-box($bg-color, $border-color, $alpha);
+  @include border-top-right-radius($border-radius);
+  @include border-bottom-right-radius($border-radius);
+}
+
+@mixin content-box-left($bg-color:$yellow, $border-color:$white, $alpha:1, $border-radius:7)
+{
+  @include content-box($bg-color, $border-color, $alpha);
+  @include border-top-left-radius($border-radius);
+  @include border-bottom-left-radius($border-radius);
+}
+
 @mixin triangle-right($border-right-length, $border-top-length, $border-bottom-length, $color)
 {
   border-right:$border-right-length solid $color;
