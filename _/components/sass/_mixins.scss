@@ -39,6 +39,20 @@
   border-bottom:$border-bottom-length solid transparent;
 }
 
+@mixin triangle-top($border-bottom-length, $border-right-length, $border-left-length, $color)
+{
+  border-bottom:$border-bottom-length solid $color;
+  border-right:$border-right-length solid transparent;
+  border-left:$border-left-length solid transparent;
+}
+
+@mixin triangle-bottom($border-top-length, $border-right-length, $border-left-length, $color)
+{
+  border-top:$border-top-length solid $color;
+  border-right:$border-right-length solid transparent;
+  border-left:$border-left-length solid transparent;
+}
+
 @mixin triangle-before-after()
 {
   width:0;

@@ -47,6 +47,7 @@ body
   font-size:10px; /*fallback*/
   font-size:1.0rem; /* 10/$rembase */
   line-height: 1.542; /* $line-height-base ÷ $fontbase */
+    overflow-x:hidden;
 }
 h1
 {
@@ -76,7 +77,7 @@ p
 {
   font-size:24px; /*fallback*/
   font-size:2.4rem; /*24/$rembase*/
-  line-height:1;
+  line-height:1.25;
 }
 
 .type-by-line
