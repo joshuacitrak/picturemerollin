@@ -60,7 +60,7 @@
 .menu-box
 {
   @include animate();
-  @include content-box-left($black, $white, .8, 7px);
+  @include content-box-left($black, $lt-outline, .8, 7px);
   width:93px;
   height:349px;
   position:absolute;
@@ -87,22 +87,16 @@
   //the outline
   &:before 
   {
-    @include triangle-right(31px, 21px, 21px, $white);
+    @include triangle-right(31px, 21px, 21px, $lt-outline);
      margin-top:-1px;
     margin-left:-1px;
     z-index:-100;//put it below the bg triangle
   }
 
-  
    @media (min-width:$large-screen)
       {
         width:210px;
         height:449px;
-      }
-   @media (min-width:$x-large-screen)
-      {
-        width:210px;
-        height:599px;
       }
 }
             
@@ -126,13 +120,14 @@
          
 .menu-box-open
 {
-  right:0px;
+  right:-1px;
 }
 
 .menu-content
 {
-  color:$yellow;
+  color:$lt-outline;
   padding-left:$default-padding;
+    overflow:   hidden;
   
   h3.menu-header
   {
@@ -145,7 +140,7 @@
 .hamburger-container
 {
   @include background($black);
-  border:$grey 1px solid;
+  border:$lt-outline 1px solid;
   width:50px;
   height:50px;
   position:absolute;
@@ -208,52 +203,96 @@
 .quote-by-content, .quote-content
 {
   padding:$default-padding $default-padding/2;
-  color:$dark-grey;
+  color:$lt-txt;
+    
   @media (min-width: $medium-screen)
       {
         padding:$default-padding*2 $default-padding;
         margin:$default-padding $default-padding/2;
-      }
+          
+          p{
+         font-size:18px; /*fallback*/
+         font-size:1.8rem;
+        }
+      }   //min-width: $medium-screen)
+    @media (min-width: $large-screen)
+      {          
+          p{
+         font-size:20px; /*fallback*/
+         font-size:2.0rem;
+        }
+      } //(min-width: $large-screen)
 }
 
 .quote-content
 {
-  @include content-box-right($dark-yellow, lighten($dark-yellow, 10%), 1, 7px);
+    margin:24px 0;
+  @include content-box-right($md-bkgrnd, $lt-outline, 1, 7px);
   position:relative;  
 }
 
 .quote-content-wrapper
 {
+    margin:12px;
   &:after,
   &:before 
   {
     @include triangle-before-after();
-    left:97%;
-    top:30%;
-    @media (max-width: $medium-screen)
-      {
-        left:94%;
-      }
+    left:52%;
+    top:100%;
   }
   //the bg
   &:after 
   {
-     @include triangle-left(40px, 45px, 45px, $dark-yellow);
+     @include triangle-bottom(30px, 35px, 35px, $md-bkgrnd);
      z-index: 1;
   }
   //the outline
   &:before 
   {
-    @include triangle-left(41px, 46px, 46px, lighten($dark-yellow, 10%));
+    @include triangle-bottom(31px, 36px, 36px, $md-bkgrnd);
      margin-top:-1px;
     margin-right:-1px;
     z-index:-100;//put it below the bg triangle
   }
+    
+    @media(min-width:$medium-screen)
+     {   
+         &:after,
+          &:before 
+          {
+            left:94%;
+            top:25%;
+          }
+          //the bg
+          &:after 
+          {
+             @include triangle-left(40px, 45px, 45px, $md-bkgrnd);
+             z-index: 1;
+          }
+          //the outline
+          &:before 
+          {
+            @include triangle-left(41px, 46px, 46px, $md-bkgrnd);
+             margin-top:-1px;
+            margin-right:-1px;
+            z-index:-100;//put it below the bg triangle
+          }
+     }//media
+    
+    @media(min-width:$large-screen)
+     { 
+         &:after,
+          &:before 
+          {
+            left:99%;
+          }
+     }//media
 }
 .quote-by-content h4
 {
   font-family:$secondary-font;
-  color:$blue;
+  color:$graf-txt;
 }
 
 .quote-mark
@@ -263,19 +302,24 @@
   display:inline-block;
   line-height:.1;
   padding:6px 12px;
-  color:darken($dark-grey, 20%);
+  color:$graf-txt;
   
   &:last-child
   {
     position:absolute;
-    left:90%;
-    bottom:4%;
+    left:84%;
+    bottom:2%;
     
     @media (min-width: $medium-screen)
       {
-        left:85%;
+        left:80%;
+        bottom:4%;
       }
   }
+}
+.carousel-control
+{
+    top:30%;
 }
 .carousel-control.left, .carousel-control.right //reset
 {
@@ -284,8 +328,12 @@
 .quote-arrows-left, .quote-arrows-right
 {
   font-family:$secondary-font;
-  font-size:$ex-ex-large-font-size;
-  color:$black;
+  font-size:6em;
+  color:$lt-txt;
+    @media(min-width:$medium-screen)
+     { 
+         font-size:$ex-ex-large-font-size;
+     }
 }
 
 .author-image

@@ -47,6 +47,11 @@ body
   font-size:10px; /*fallback*/
   font-size:1.0rem; /* 10/$rembase */
   line-height: 1.542; /* $line-height-base ÷ $fontbase */
+overflow-x:hidden;
+}
+h1, h2, h3, h4
+{
+  text-rendering:optimizeLegibility;
 }
 h1
 {
@@ -74,14 +79,14 @@ h4
 }
 p
 {
-  font-size:24px; /*fallback*/
-  font-size:2.4rem; /*24/$rembase*/
-  line-height:1;
+  font-size:20px; /*fallback*/
+  font-size:2.0rem; /*24/$rembase*/
+  line-height:1.25;
 }
 
 .type-by-line
 {
-  color:$blue;
+  color:$graf-txt;
 }
 
 h3.menu-header
@@ -97,8 +102,8 @@ h3.menu-header
 //
 body
 {
-  color: $white;
-  background: $yellow;  
+  color: $lt-txt;
+  background: $dk-bkgrnd;  
 }
 
 .container-fluid//reset
@@ -112,12 +117,12 @@ body
 a
 {
   text-decoration:none;
-  color:$blue;
+  color:$link-txt;
   @include opacity($alpha-start);
   @include single-transition(all, $transition-time, ease-out);
   &:hover
   {
-    color: darken($blue, 25%);
+    color: $link-hover-txt;
     text-decoration:none;
     @include opacity($alpha-end);
     @include single-transition(all, $transition-time, ease-out);

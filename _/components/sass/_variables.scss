@@ -12,15 +12,20 @@ $ex-large-font-size:2em;
 $ex-ex-large-font-size:8.35em;
 
 //colors ===================================
-$yellow:#fac640;
-$dark-yellow: #e7ba46;
-$brown:#493d0b;
-$blue:#7ebefb;
-$dark-grey: #444;
-$grey: #8a8a8a;
-$light-grey: #949060;
 $black:#101010;
-$white:#efefef;
+
+$lt-txt:#ededed;
+$dk-txt:#1e2d3c;
+$graf-txt:#7ebefb;
+$link-txt:#6e6e6e;
+$link-hover-txt:#fac63f;
+
+$lt-bkgrnd:#ededed;
+$md-bkgrnd:#3e5d7c;
+$dk-bkgrnd:#1e2d3c;
+
+$lt-outline:#1e2d3c;
+$dk-outline:#3e5d7c;
 
 //screen sizes ===============================
 //100% = 1 em ~= 16px ~= 14pt

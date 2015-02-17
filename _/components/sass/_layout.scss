@@ -18,14 +18,13 @@ header
       width: 100%;
       height: 200px;
       margin: 0 auto;
-      border-bottom:$dark-yellow 1px solid;
-      @include background(linear-gradient(bottom left, rgba($black, .7), rgba($black, 0)),image-url("bike_xs.jpg") center top no-repeat, $dark-yellow);
+      @include background(linear-gradient(bottom left, rgba($black, .6), rgba($black, 0)),image-url("bike_xs.jpg") center top no-repeat, $dk-bkgrnd);
       $background-size:cover;
       
       @media (min-width: $x-small-screen +1) 
       {
         @include animate();
-        @include background(linear-gradient(bottom left, rgba($black, .7), rgba($black, 0)),image-url("bike_sm.jpg") center top no-repeat, $dark-yellow);
+        @include background(linear-gradient(bottom left, rgba($black, .6), rgba($black, 0)),image-url("bike_sm.jpg") center top no-repeat, $dk-bkgrnd);
         height: 300px;
       }
   
@@ -33,21 +32,21 @@ header
       @media (min-width: $medium-screen)
       {
         @include animate();
-        @include background(linear-gradient(bottom left, rgba($black, .7), rgba($black, 0)),image-url("thecity.svg") center bottom no-repeat, image-url("bike_md.jpg") center top no-repeat, $dark-yellow);
+        @include background(linear-gradient(bottom left, rgba($black, .6), rgba($black, 0)),image-url("thecity.svg") center bottom no-repeat, image-url("bike_md.jpg") center top no-repeat, $dk-bkgrnd);
         height: 350px;
       }
   
      @media (min-width:$large-screen)
       {
         @include animate();
-        @include background(linear-gradient(bottom left, rgba($black, .7), rgba($black, 0)),image-url("thecity.svg") center bottom no-repeat, image-url("bike_lg.jpg") center top no-repeat, $dark-yellow);
+        @include background(linear-gradient(bottom left, rgba($black, .6), rgba($black, 0)),image-url("thecity.svg") center bottom no-repeat, image-url("bike_lg.jpg") center top no-repeat, $dk-bkgrnd);
         height: 450px;
       }
   
      @media (min-width:$x-large-screen)
       {
         @include animate();
-        @include background(linear-gradient(bottom left, rgba($black, .6), rgba($black, 0)),image-url("thecity.svg") center bottom no-repeat, image-url("bike_xlg.jpg") center top no-repeat, $dark-yellow);
+        @include background(linear-gradient(bottom left, rgba($black, .6), rgba($black, 0)),image-url("thecity.svg") center bottom no-repeat, image-url("bike_xlg.jpg") center top no-repeat, $dk-bkgrnd);
         height: 600px;
       }
       
@@ -70,7 +69,7 @@ header
         img.pmr
         {
           display:block;
-          width:80%;
+          width:83%;
           
           
           @media (min-width:$medium-screen)
@@ -152,77 +151,108 @@ header
 
 .section-wrapper
 {
-  @include background(rgba(0, 0, 0, .5));
-  padding:$default-padding 0;
+  @include background($lt-bkgrnd); 
+    padding:$default-padding $default-padding/2;
 }
 
 .tag-line, .pitch-line
 {
-  color:$white;
+  color:$dk-txt;
 }
 
 .tag-line
 {
-  line-height:.9;
+  line-height:1;
+   font-size:32px; /*fallback*/
+  font-size:3.2rem; /*32/$rembase*/
+    @media(min-width:$medium-screen)
+    {
+        font-size:38px; /*fallback*/
+          font-size:3.8rem; /*38/$rembase*/
+    }
+}
+
+.pitch-line
+{
+      font-size:26px; /*fallback*/
+  font-size:2.6rem; /*32/$rembase*/
+    @media(min-width:$medium-screen)
+    {
+        font-size:32px; /*fallback*/
+          font-size:3.2rem; /*38/$rembase*/
+    }   
 }
 
 
 .bio
 {
-  padding-bottom:$default-padding;
+  padding:$default-padding 0;
+    @include clearfix;
   
   .author-image
   {
-    
     @include border-radius(50%);
     height:200px;
     width:200px;
-    @include background(image-url('bio-sm.jpg') no-repeat, $dark-yellow);
+    @include background(image-url('bio-sm.jpg') no-repeat, $dk-bkgrnd);
     
     @media(min-width:$medium-screen)
     {
-      @include background(image-url('bio.jpg') no-repeat, $dark-yellow);
+      @include background(image-url('bio.jpg') no-repeat, $dk-bkgrnd);
       height:300px;
       width:300px;
     }
     
   }
-  
-  .author-bio
-  {
+    
     .author-bio-name
     {
-      font-family:$secondary-font;
-      color:$blue;
-    }
-  }
+        display:block;
+        font-family:$secondary-font;
+      color:$graf-txt;
+        padding-left:4px;
+        @media(min-width:$medium-screen)
+     {    
+         padding-left:26px;
+     }
+    }//author-bio-name
+    
+    .author-bio
+    {
+        p{
+            color:$lt-txt;
+        }
+    }//author-bio
 }
 
 .cta
 {
-  line-height:2;//give space
+  line-height:1.8;//give space
+    a {
+        display:block;
+    }//a
 }
 
 //
 //FOOTER STYLES=========================================== FOOTER STYLES
 //
-footer, .footer-content
+.footer-content, .copyright-stuff
 {
-  padding:$default-padding $default-padding/2;  
+  padding:$default-padding 0;  
 }
 footer
 {
-  margin-top:$default-padding;
-  @include background(rgba(0, 0, 0, .35));
+  @include background($lt-bkgrnd);
 }
 footer p
 {
-  color:$dark-grey;
+  color:$dk-txt;
   font-size:$medium-font-size;
   margin:1em;
 }
 .copyright-stuff
 {
+    
   font-size:$small-font-size;
-  margin-top:.5em;
+  margin-top:.6em;
 }
