@@ -11,14 +11,14 @@
   height:100%;
 }
 
-@mixin content-box-right($bg-color:$yellow, $border-color:$white, $alpha:1, $border-radius:7)
+@mixin content-box-right($bg-color, $border-color, $alpha:1, $border-radius:7)
 {
   @include content-box($bg-color, $border-color, $alpha);
   @include border-top-right-radius($border-radius);
   @include border-bottom-right-radius($border-radius);
 }
 
-@mixin content-box-left($bg-color:$yellow, $border-color:$white, $alpha:1, $border-radius:7)
+@mixin content-box-left($bg-color, $border-color, $alpha:1, $border-radius:7)
 {
   @include content-box($bg-color, $border-color, $alpha);
   @include border-top-left-radius($border-radius);
@@ -37,6 +37,20 @@
   border-left:$border-left-length solid $color;
   border-top:$border-top-length solid transparent;
   border-bottom:$border-bottom-length solid transparent;
+}
+
+@mixin triangle-top($border-bottom-length, $border-right-length, $border-left-length, $color)
+{
+  border-bottom:$border-bottom-length solid $color;
+  border-right:$border-right-length solid transparent;
+  border-left:$border-left-length solid transparent;
+}
+
+@mixin triangle-bottom($border-top-length, $border-right-length, $border-left-length, $color)
+{
+  border-top:$border-top-length solid $color;
+  border-right:$border-right-length solid transparent;
+  border-left:$border-left-length solid transparent;
 }
 
 @mixin triangle-before-after()
