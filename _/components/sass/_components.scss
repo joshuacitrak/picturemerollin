@@ -93,10 +93,16 @@
     z-index:-100;//put it below the bg triangle
   }
 
+  
    @media (min-width:$large-screen)
       {
         width:210px;
         height:449px;
+      }
+   @media (min-width:$x-large-screen)
+      {
+        width:210px;
+        height:599px;
       }
 }
             
@@ -120,7 +126,7 @@
          
 .menu-box-open
 {
-  right:-1px;
+  right:0px;
 }
 
 .menu-content
@@ -212,68 +218,37 @@
 
 .quote-content
 {
-    margin:24px 0;
   @include content-box-right($dark-yellow, lighten($dark-yellow, 10%), 1, 7px);
   position:relative;  
 }
 
 .quote-content-wrapper
 {
-    margin:12px;
   &:after,
   &:before 
   {
     @include triangle-before-after();
-    left:52%;
-    top:100%;
+    left:97%;
+    top:30%;
+    @media (max-width: $medium-screen)
+      {
+        left:94%;
+      }
   }
   //the bg
   &:after 
   {
-     @include triangle-bottom(30px, 35px, 35px, $dark-yellow);
+     @include triangle-left(40px, 45px, 45px, $dark-yellow);
      z-index: 1;
   }
   //the outline
   &:before 
   {
-    @include triangle-bottom(31px, 36px, 36px, lighten($dark-yellow, 10%));
+    @include triangle-left(41px, 46px, 46px, lighten($dark-yellow, 10%));
      margin-top:-1px;
     margin-right:-1px;
     z-index:-100;//put it below the bg triangle
   }
-    
-    @media(min-width:$medium-screen)
-     {   
-         &:after,
-          &:before 
-          {
-            left:94%;
-            top:25%;
-          }
-          //the bg
-          &:after 
-          {
-             @include triangle-left(40px, 45px, 45px, $dark-yellow);
-             z-index: 1;
-          }
-          //the outline
-          &:before 
-          {
-            @include triangle-left(41px, 46px, 46px, lighten($dark-yellow, 10%));
-             margin-top:-1px;
-            margin-right:-1px;
-            z-index:-100;//put it below the bg triangle
-          }
-     }//media
-    
-    @media(min-width:$large-screen)
-     { 
-         &:after,
-          &:before 
-          {
-            left:99%;
-          }
-     }//media
 }
 .quote-by-content h4
 {
@@ -293,18 +268,14 @@
   &:last-child
   {
     position:absolute;
-    left:84%;
-    bottom:2%;
+    left:90%;
+    bottom:4%;
     
     @media (min-width: $medium-screen)
       {
-        left:80%;
+        left:85%;
       }
   }
-}
-.carousel-control
-{
-    top:30%;
 }
 .carousel-control.left, .carousel-control.right //reset
 {
@@ -313,12 +284,8 @@
 .quote-arrows-left, .quote-arrows-right
 {
   font-family:$secondary-font;
-  font-size:6em;
+  font-size:$ex-ex-large-font-size;
   color:$black;
-    @media(min-width:$medium-screen)
-     { 
-         font-size:$ex-ex-large-font-size;
-     }
 }
 
 .author-image
